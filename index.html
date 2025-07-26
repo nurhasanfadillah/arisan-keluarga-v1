@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arisan Keluarga PWA</title>
+
+    <!-- PWA Manifest & Theme Color -->
+    <link rel="manifest" href="/assets/metadata-S-_r_xMR.json" />
+    <meta name="theme-color" content="#0A68FF">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .confetti-particle {
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        border-radius: 4px;
+        top: -20px; /* Start above the screen */
+        animation: fall linear forwards;
+        pointer-events: none;
+      }
+
+      @keyframes fall {
+        from {
+          transform: translateY(0vh) rotateZ(0deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(110vh) rotateZ(720deg);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              primary: '#0A68FF', // Vibrant Blue
+              'primary-light': '#E6F0FF',
+              background: '#F8F9FA', // Very light gray
+              card: '#FFFFFF',
+              'text-main': '#1F2937', // Dark Gray
+              'text-secondary': '#6B7280', // Medium Gray
+              'text-light': '#9CA3AF', // Lighter Gray
+              'accent-success': '#10B981', // Green
+              'accent-warning': '#F59E0B', // Orange
+              'accent-danger': '#EF4444', // Red
+              'border-color': '#E5E7EB', // Border color
+            },
+            borderRadius: {
+              '4xl': '2rem',
+            },
+            boxShadow: {
+              'subtle': '0 4px 12px rgba(0, 0, 0, 0.05)',
+              'card': '0 2px 8px rgba(0, 0, 0, 0.06)',
+              'button': '0 4px 12px rgba(10, 104, 255, 0.25)',
+              't-strong': '0 -4px 12px rgba(0, 0, 0, 0.05)',
+            },
+            keyframes: {
+              'fade-in': { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              'slide-in-up': { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              'slide-in-down': { '0%': { transform: 'translateY(-20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              'fade-in-up': { 'from': { opacity: '0', transform: 'translateY(20px)' }, 'to': { opacity: '1', transform: 'translateY(0)' } },
+            },
+            animation: {
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+              'slide-in-up': 'slide-in-up 0.4s ease-out forwards',
+              'slide-in-down': 'slide-in-down 0.4s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.7.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0",
+    "recharts": "https://esm.sh/recharts@^2.12.7",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.45.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BLMMMT51.js"></script>
+</head>
+  <body class="bg-background text-text-main">
+    <div id="root"></div>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service Worker: Registered with scope:', registration.scope);
+          }).catch(registrationError => {
+            console.log('Service Worker: Registration failed:', registrationError);
+          });
+        });
+      }
+    </script>
+
+    <!-- Main App Script -->
+  </body>
+</html>

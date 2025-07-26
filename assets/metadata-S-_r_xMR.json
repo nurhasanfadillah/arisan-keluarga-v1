@@ -1,0 +1,25 @@
+{
+  "name": "Arisan Keluarga PWA",
+  "short_name": "Arisan Keluarga",
+  "description": "Progressive Web App (PWA) yang dirancang untuk mendigitalisasi dan menyederhanakan pengelolaan arisan keluarga. Aplikasi ini dibangun dengan filosofi mobile-first, memprioritaskan silaturahmi dan kemudahan akses bagi seluruh anggota, dengan kontrol penuh yang terpusat pada seorang Admin.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F7F9FC",
+  "theme_color": "#00A99D",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "requestFramePermissions": [],
+  "prompt": ""
+}
